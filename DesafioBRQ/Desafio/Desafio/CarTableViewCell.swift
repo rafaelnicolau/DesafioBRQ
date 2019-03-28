@@ -7,9 +7,18 @@
 //
 
 import UIKit
+import Kingfisher
+import Foundation
 
 class CarTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var ivCarro: UIImageView!
+    @IBOutlet weak var lbMarca: UILabel!
+    @IBOutlet weak var lbNome: UILabel!
+    @IBOutlet weak var lbQuant: UILabel!
+    @IBOutlet weak var lbPreco: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +29,29 @@ class CarTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    func prepare(with cars: Carros){
+       let preco = cars.preco as NSNumber
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = NSLocale.current
+        formatter.string(from: preco)
+        formatter.locale = Locale(identifier: "pt-BR")
+        
+        lbMarca.text = cars.marca
+        lbNome.text = cars.nome
+        lbQuant.text = String(cars.quantidade)
+        lbPreco.text = formatter.string(from: preco)
+        if let url = URL(string: cars.imagem) {
+            ivCarro.kf.indicatorType = .activity
+            ivCarro.kf.setImage(with: url)
+            if ivCarro.image == nil {
+                ivCarro.image = UIImage(named: "Fusca_icon")
+            }
+        } else {
+            ivCarro.image = UIImage(named: "Fusca_icon")
+        }
+    }
+    
+    
 }

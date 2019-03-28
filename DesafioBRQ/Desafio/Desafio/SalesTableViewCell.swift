@@ -10,6 +10,16 @@ import UIKit
 
 class SalesTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var ivCarro: UIImageView!
+    @IBOutlet weak var lbMarca: UILabel!
+    @IBOutlet weak var lbNome: UILabel!
+    @IBOutlet weak var lbQuant: UILabel!
+    @IBOutlet weak var lbPreco: UILabel!
+    
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +31,12 @@ class SalesTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func prepare(with cars: Carros){
+        lbMarca.text = cars.marca
+        lbNome.text = cars.nome
+        lbQuant.text = String(cars.quantidade)
+        lbPreco.text = String(cars.preco)
+    }
+    
+    
 }

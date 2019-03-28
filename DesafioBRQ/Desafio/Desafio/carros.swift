@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+
+class Carros : Codable {
+    
+    var id: Int
+    var nome: String
+    var descricao: String
+    var marca: String
+    var quantidade: Int
+    var preco: Double
+    var imagem: String
+}

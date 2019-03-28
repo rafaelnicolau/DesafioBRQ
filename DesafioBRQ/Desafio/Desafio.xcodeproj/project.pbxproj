@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93F7D4C9A42E1293305BE019 /* Pods_Desafio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7198BEDCF2C43963A658AA2A /* Pods_Desafio.framework */; };
+		FE0541FD224C138C00D9EEBB /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0541FC224C138C00D9EEBB /* CarTableViewCell.swift */; };
 		FE29EA012203A38F000FECC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE29EA002203A38F000FECC2 /* AppDelegate.swift */; };
 		FE29EA032203A38F000FECC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE29EA022203A38F000FECC2 /* ViewController.swift */; };
 		FE29EA062203A38F000FECC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE29EA042203A38F000FECC2 /* Main.storyboard */; };
 		FE29EA0B2203A391000FECC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE29EA092203A391000FECC2 /* LaunchScreen.storyboard */; };
 		FE29EA142203B43F000FECC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE29EA072203A391000FECC2 /* Assets.xcassets */; };
 		FE45E4422205D17800EFAD8B /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45E4402205D17800EFAD8B /* InfoViewController.swift */; };
-		FE45E4432205D17800EFAD8B /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE45E4412205D17800EFAD8B /* InfoViewController.xib */; };
 		FE45E4462205D1F400EFAD8B /* SalesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45E4442205D1F400EFAD8B /* SalesTableViewController.swift */; };
-		FE45E4472205D1F400EFAD8B /* SalesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE45E4452205D1F400EFAD8B /* SalesTableViewController.xib */; };
+		FE9DDE382245284200317573 /* carros.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9DDE372245284200317573 /* carros.swift */; };
+		FE9DDE3A224545F600317573 /* REST.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9DDE39224545F600317573 /* REST.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7198BEDCF2C43963A658AA2A /* Pods_Desafio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Desafio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9145BCDB915191599472CF87 /* Pods-Desafio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio.debug.xcconfig"; path = "Target Support Files/Pods-Desafio/Pods-Desafio.debug.xcconfig"; sourceTree = "<group>"; };
+		B898CC79044DF55F0FD591D3 /* Pods-Desafio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio.release.xcconfig"; path = "Target Support Files/Pods-Desafio/Pods-Desafio.release.xcconfig"; sourceTree = "<group>"; };
+		FE0541FC224C138C00D9EEBB /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
 		FE29E9FD2203A38F000FECC2 /* Desafio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Desafio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE29EA002203A38F000FECC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE29EA022203A38F000FECC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,9 +33,9 @@
 		FE29EA0A2203A391000FECC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE29EA0C2203A391000FECC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE45E4402205D17800EFAD8B /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		FE45E4412205D17800EFAD8B /* InfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
 		FE45E4442205D1F400EFAD8B /* SalesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesTableViewController.swift; sourceTree = "<group>"; };
-		FE45E4452205D1F400EFAD8B /* SalesTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SalesTableViewController.xib; sourceTree = "<group>"; };
+		FE9DDE372245284200317573 /* carros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carros.swift; sourceTree = "<group>"; };
+		FE9DDE39224545F600317573 /* REST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REST.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93F7D4C9A42E1293305BE019 /* Pods_Desafio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0235D8E3DF0856ADB40D26D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7198BEDCF2C43963A658AA2A /* Pods_Desafio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3FADFCCC609A7BD9EDB74B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9145BCDB915191599472CF87 /* Pods-Desafio.debug.xcconfig */,
+				B898CC79044DF55F0FD591D3 /* Pods-Desafio.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FE29E9F42203A38F000FECC2 = {
 			isa = PBXGroup;
 			children = (
 				FE29E9FF2203A38F000FECC2 /* Desafio */,
 				FE29E9FE2203A38F000FECC2 /* Products */,
+				A3FADFCCC609A7BD9EDB74B9 /* Pods */,
+				0235D8E3DF0856ADB40D26D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,10 +91,11 @@
 				FE29EA002203A38F000FECC2 /* AppDelegate.swift */,
 				FE29EA022203A38F000FECC2 /* ViewController.swift */,
 				FE29EA042203A38F000FECC2 /* Main.storyboard */,
+				FE0541FC224C138C00D9EEBB /* CarTableViewCell.swift */,
 				FE45E4442205D1F400EFAD8B /* SalesTableViewController.swift */,
-				FE45E4452205D1F400EFAD8B /* SalesTableViewController.xib */,
+				FE9DDE372245284200317573 /* carros.swift */,
+				FE9DDE39224545F600317573 /* REST.swift */,
 				FE45E4402205D17800EFAD8B /* InfoViewController.swift */,
-				FE45E4412205D17800EFAD8B /* InfoViewController.xib */,
 				FE29EA072203A391000FECC2 /* Assets.xcassets */,
 				FE29EA092203A391000FECC2 /* LaunchScreen.storyboard */,
 				FE29EA0C2203A391000FECC2 /* Info.plist */,
@@ -83,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE29EA0F2203A391000FECC2 /* Build configuration list for PBXNativeTarget "Desafio" */;
 			buildPhases = (
+				82AE2D243FF028FFB3101936 /* [CP] Check Pods Manifest.lock */,
 				FE29E9F92203A38F000FECC2 /* Sources */,
 				FE29E9FA2203A38F000FECC2 /* Frameworks */,
 				FE29E9FB2203A38F000FECC2 /* Resources */,
+				6ABCDAC470ABFA0DE20B1B6A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,13 +165,60 @@
 			files = (
 				FE29EA0B2203A391000FECC2 /* LaunchScreen.storyboard in Resources */,
 				FE29EA142203B43F000FECC2 /* Assets.xcassets in Resources */,
-				FE45E4432205D17800EFAD8B /* InfoViewController.xib in Resources */,
-				FE45E4472205D1F400EFAD8B /* SalesTableViewController.xib in Resources */,
 				FE29EA062203A38F000FECC2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6ABCDAC470ABFA0DE20B1B6A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Desafio/Pods-Desafio-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Desafio/Pods-Desafio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82AE2D243FF028FFB3101936 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Desafio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FE29E9F92203A38F000FECC2 /* Sources */ = {
@@ -150,9 +226,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE45E4462205D1F400EFAD8B /* SalesTableViewController.swift in Sources */,
+				FE0541FD224C138C00D9EEBB /* CarTableViewCell.swift in Sources */,
+				FE9DDE3A224545F600317573 /* REST.swift in Sources */,
 				FE29EA032203A38F000FECC2 /* ViewController.swift in Sources */,
 				FE29EA012203A38F000FECC2 /* AppDelegate.swift in Sources */,
 				FE45E4422205D17800EFAD8B /* InfoViewController.swift in Sources */,
+				FE9DDE382245284200317573 /* carros.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +375,7 @@
 		};
 		FE29EA102203A391000FECC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9145BCDB915191599472CF87 /* Pods-Desafio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -313,6 +393,7 @@
 		};
 		FE29EA112203A391000FECC2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B898CC79044DF55F0FD591D3 /* Pods-Desafio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
