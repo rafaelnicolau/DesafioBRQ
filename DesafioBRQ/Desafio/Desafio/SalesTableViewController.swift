@@ -37,6 +37,11 @@ class SalesTableViewController: UITableViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! InfoViewController
+        let carro = carros[tableView.indexPathForSelectedRow!.row]
+        vc.carro = carro
+    }
     
     // MARK: - Table view data source
 

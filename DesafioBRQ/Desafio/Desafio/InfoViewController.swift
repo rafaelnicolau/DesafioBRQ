@@ -11,41 +11,40 @@ import Kingfisher
 
 class InfoViewController: UIViewController {
 
-    var carros: Carros!
+    var carro: Carros!
     
     @IBOutlet weak var ivCarro: UIImageView!
     @IBOutlet weak var lbPreco: UILabel!
     @IBOutlet weak var lbNome: UILabel!
     @IBOutlet weak var lbDescri: UILabel!
     
-    
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        func prepare(with cars: Carros){
-            let preco = cars.preco as NSNumber
-            let formatter = NumberFormatter()
-            formatter.numberStyle = .currency
-            formatter.locale = NSLocale.current
-            formatter.string(from: preco)
-            formatter.locale = Locale(identifier: "pt-BR")
-            
-            if let url = URL(string: cars.imagem) {
-                ivCarro.kf.indicatorType = .activity
-                ivCarro.kf.setImage(with: url)
-                if ivCarro.image == nil {
-                    ivCarro.image = UIImage(named: "Fusca_icon")
-                }
-            } else {
+        title = carro.marca
+        let preco = carro.preco as NSNumber
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = NSLocale.current
+        formatter.string(from: preco)
+        formatter.locale = Locale(identifier: "pt-BR")
+        lbNome.text = carro.nome
+        lbPreco.text = formatter.string(from: preco)
+        lbDescri.text = carro.descricao
+        if let url = URL(string: carro.imagem) {
+            ivCarro.kf.indicatorType = .activity
+            ivCarro.kf.setImage(with: url)
+            if ivCarro.image == nil {
                 ivCarro.image = UIImage(named: "Fusca_icon")
             }
-            lbNome.text = cars.nome
-            lbDescri.text = cars.descricao
+        } else {
+            ivCarro.image = UIImage(named: "Fusca_icon")
         }
-        // Do any additional setup after loading the view.
     }
+
+        // Do any additional setup after loading the view.
 
 
     /*

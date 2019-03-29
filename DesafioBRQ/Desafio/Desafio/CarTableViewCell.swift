@@ -37,7 +37,8 @@ class CarTableViewCell: UITableViewCell {
         formatter.locale = NSLocale.current
         formatter.string(from: preco)
         formatter.locale = Locale(identifier: "pt-BR")
-        
+        var id = cars.id
+        var descri = cars.descricao
         lbMarca.text = cars.marca
         lbNome.text = cars.nome
         lbQuant.text = String(cars.quantidade)
@@ -51,7 +52,15 @@ class CarTableViewCell: UITableViewCell {
         } else {
             ivCarro.image = UIImage(named: "Fusca_icon")
         }
+            
+        func prepareForSegue(for segue: UIStoryboardSegue, sender: AnyObject?) {
+            let infoViewController = segue.destination as! InfoViewController
+            infoViewController.ivCarro = ivCarro
+            infoViewController.lbNome = lbNome
+            infoViewController.lbPreco = lbPreco
+        }
+        
     }
     
-    
+  
 }
