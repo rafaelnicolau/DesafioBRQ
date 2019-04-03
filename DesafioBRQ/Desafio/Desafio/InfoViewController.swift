@@ -11,7 +11,11 @@ import Kingfisher
 
 class InfoViewController: UIViewController {
 
-    var carro: Carros!
+    var id: Int = 0
+    var carro: Carro?
+    var carrinho: [Carro] = []
+    static var totalcarrinho: [Carro] = []
+    var service = DesafioAPI()
     
     @IBOutlet weak var ivCarro: UIImageView!
     @IBOutlet weak var lbPreco: UILabel!
@@ -21,19 +25,30 @@ class InfoViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        service.loadCarro(idCar: id) { (car) in
+            if let car = car {
+                self.carro = car
+                self.loadInfos()
+                }
+            }
         
-        
-        title = carro.marca
-        let preco = carro.preco as NSNumber
+       
+        }
+
+
+    func loadInfos(){
+        title = carro!.nome
+        let preco = carro!.preco as NSNumber
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.locale = NSLocale.current
         formatter.string(from: preco)
         formatter.locale = Locale(identifier: "pt-BR")
-        lbNome.text = carro.nome
+        lbNome.text = carro?.nome
         lbPreco.text = formatter.string(from: preco)
-        lbDescri.text = carro.descricao
-        if let url = URL(string: carro.imagem) {
+        lbDescri.text = carro?.descricao
+        if let url = URL(string: (carro?.imagem)!) {
             ivCarro.kf.indicatorType = .activity
             ivCarro.kf.setImage(with: url)
             if ivCarro.image == nil {
@@ -43,18 +58,18 @@ class InfoViewController: UIViewController {
             ivCarro.image = UIImage(named: "Fusca_icon")
         }
     }
+    
 
-        // Do any additional setup after loading the view.
+    @IBAction func addCarrinho(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Você deseja comprar esse \(carro!.nome)?", message: "Ele está custando \(lbPreco.text!)", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Sim", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Não", style: .cancel, handler: nil))
+        self.present(alert, animated: true)
 
+        carrinho.insert(carro!, at: 0)
+        print(carrinho)
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+}
+

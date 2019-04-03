@@ -9,7 +9,7 @@
 import Foundation
 
 
-class Carros : Codable {
+class Carro : Codable {
     
     var id: Int
     var nome: String

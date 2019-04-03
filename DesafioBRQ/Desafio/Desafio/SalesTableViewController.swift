@@ -12,26 +12,25 @@ import Foundation
 
 class SalesTableViewController: UITableViewController {
     
-    var carros: [Carros] = []
+    var carros: [Carro] = []
     var service = DesafioAPI()
+
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Carros"
         service.loadCarros { (cars) in
             if let cars = cars {
                 self.carros = cars
                 self.tableView.reloadData()
+               
             }
         }
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+       
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
@@ -39,8 +38,8 @@ class SalesTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! InfoViewController
-        let carro = carros[tableView.indexPathForSelectedRow!.row]
-        vc.carro = carro
+        let idcar = carros[tableView.indexPathForSelectedRow!.row].id
+        vc.id = idcar
     }
     
     // MARK: - Table view data source
@@ -56,6 +55,8 @@ class SalesTableViewController: UITableViewController {
         return cell
     }
     
+
+
 
     /*
     // Override to support conditional editing of the table view.

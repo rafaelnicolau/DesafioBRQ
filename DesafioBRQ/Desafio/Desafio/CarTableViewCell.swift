@@ -12,12 +12,22 @@ import Foundation
 
 class CarTableViewCell: UITableViewCell {
 
+    var id: Int?
+    var descri: String?
+    var car: Carro?
+    
     
     @IBOutlet weak var ivCarro: UIImageView!
     @IBOutlet weak var lbMarca: UILabel!
     @IBOutlet weak var lbNome: UILabel!
     @IBOutlet weak var lbQuant: UILabel!
     @IBOutlet weak var lbPreco: UILabel!
+    @IBAction func btteste(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Você deseja comprar esse?", message: "Ele está custando", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Sim", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Não", style: .cancel, handler: nil))
+        
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,15 +40,17 @@ class CarTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func prepare(with cars: Carros){
+    func prepare(with cars: Carro){
+        car = cars
+        print(car!)
        let preco = cars.preco as NSNumber
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.locale = NSLocale.current
         formatter.string(from: preco)
         formatter.locale = Locale(identifier: "pt-BR")
-        var id = cars.id
-        var descri = cars.descricao
+        self.id = cars.id
+        self.descri = cars.descricao
         lbMarca.text = cars.marca
         lbNome.text = cars.nome
         lbQuant.text = String(cars.quantidade)
@@ -52,14 +64,12 @@ class CarTableViewCell: UITableViewCell {
         } else {
             ivCarro.image = UIImage(named: "Fusca_icon")
         }
-            
-        func prepareForSegue(for segue: UIStoryboardSegue, sender: AnyObject?) {
-            let infoViewController = segue.destination as! InfoViewController
-            infoViewController.ivCarro = ivCarro
-            infoViewController.lbNome = lbNome
-            infoViewController.lbPreco = lbPreco
-        }
-        
+    }
+    
+    func prepareForSegue(for segue: UIStoryboardSegue, sender: AnyObject?) {
+        id = car?.id
+        let infoViewController = segue.destination as! InfoViewController
+        infoViewController.id = self.id!
     }
     
   

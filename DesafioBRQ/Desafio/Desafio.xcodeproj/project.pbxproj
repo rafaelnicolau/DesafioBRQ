@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		93F7D4C9A42E1293305BE019 /* Pods_Desafio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7198BEDCF2C43963A658AA2A /* Pods_Desafio.framework */; };
 		FE0541FD224C138C00D9EEBB /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0541FC224C138C00D9EEBB /* CarTableViewCell.swift */; };
+		FE16E168225394450004BC36 /* CarrinhoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16E167225394450004BC36 /* CarrinhoViewController.swift */; };
 		FE29EA012203A38F000FECC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE29EA002203A38F000FECC2 /* AppDelegate.swift */; };
 		FE29EA032203A38F000FECC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE29EA022203A38F000FECC2 /* ViewController.swift */; };
 		FE29EA062203A38F000FECC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE29EA042203A38F000FECC2 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		9145BCDB915191599472CF87 /* Pods-Desafio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio.debug.xcconfig"; path = "Target Support Files/Pods-Desafio/Pods-Desafio.debug.xcconfig"; sourceTree = "<group>"; };
 		B898CC79044DF55F0FD591D3 /* Pods-Desafio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio.release.xcconfig"; path = "Target Support Files/Pods-Desafio/Pods-Desafio.release.xcconfig"; sourceTree = "<group>"; };
 		FE0541FC224C138C00D9EEBB /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
+		FE16E167225394450004BC36 /* CarrinhoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrinhoViewController.swift; sourceTree = "<group>"; };
 		FE29E9FD2203A38F000FECC2 /* Desafio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Desafio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE29EA002203A38F000FECC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE29EA022203A38F000FECC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				FE29EA002203A38F000FECC2 /* AppDelegate.swift */,
 				FE29EA022203A38F000FECC2 /* ViewController.swift */,
 				FE29EA042203A38F000FECC2 /* Main.storyboard */,
+				FE16E167225394450004BC36 /* CarrinhoViewController.swift */,
 				FE0541FC224C138C00D9EEBB /* CarTableViewCell.swift */,
 				FE45E4442205D1F400EFAD8B /* SalesTableViewController.swift */,
 				FE9DDE372245284200317573 /* carros.swift */,
@@ -181,15 +184,19 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Desafio/Pods-Desafio-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moltin/Moltin.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moltin.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -229,6 +236,7 @@
 				FE0541FD224C138C00D9EEBB /* CarTableViewCell.swift in Sources */,
 				FE9DDE3A224545F600317573 /* REST.swift in Sources */,
 				FE29EA032203A38F000FECC2 /* ViewController.swift in Sources */,
+				FE16E168225394450004BC36 /* CarrinhoViewController.swift in Sources */,
 				FE29EA012203A38F000FECC2 /* AppDelegate.swift in Sources */,
 				FE45E4422205D17800EFAD8B /* InfoViewController.swift in Sources */,
 				FE9DDE382245284200317573 /* carros.swift in Sources */,
@@ -379,13 +387,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N8UWU2GFK6;
 				INFOPLIST_FILE = Desafio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rafaelnicolau.Desafio;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rafael.Desafio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Desafio/BridgingHeader.h;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -397,13 +407,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N8UWU2GFK6;
 				INFOPLIST_FILE = Desafio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rafaelnicolau.Desafio;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rafael.Desafio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Desafio/BridgingHeader.h;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

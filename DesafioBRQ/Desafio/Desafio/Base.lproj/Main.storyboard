@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Carros Disponíveis-->
+        <!--Sales Table View Controller-->
         <scene sceneID="RIS-gn-Zu5">
             <objects>
                 <tableViewController id="Vmw-N4-Dgf" customClass="SalesTableViewController" customModule="Desafio" customModuleProvider="target" sceneMemberID="viewController">
@@ -26,7 +26,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="341" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nhG-cw-Hg1">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nhG-cw-Hg1">
                                             <rect key="frame" x="0.0" y="0.0" width="123.5" height="100.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="nhG-cw-Hg1" secondAttribute="height" multiplier="110:89" id="dId-hm-wjh"/>
@@ -69,6 +69,14 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDa-wy-blV">
+                                            <rect key="frame" x="250" y="28" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="btteste:" destination="ope-sq-h4U" eventType="touchUpInside" id="WQM-Cg-POO"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="A97-b2-SyK" firstAttribute="top" secondItem="eUZ-ha-9uQ" secondAttribute="bottom" constant="5" id="39N-ml-iqJ"/>
@@ -103,7 +111,7 @@
                             <outlet property="delegate" destination="Vmw-N4-Dgf" id="Xlq-gY-HDt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Carros Disponíveis" largeTitleDisplayMode="never" id="lqZ-53-G04"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="lqZ-53-G04"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fjg-Zu-dOp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,7 +133,7 @@
             </objects>
             <point key="canvasLocation" x="-180" y="-179"/>
         </scene>
-        <!--Title-->
+        <!-- -->
         <scene sceneID="bgN-6P-Nx0">
             <objects>
                 <viewController id="awD-w2-h0n" customClass="InfoViewController" customModule="Desafio" customModuleProvider="target" sceneMemberID="viewController">
@@ -167,12 +175,23 @@
                                     <constraint firstAttribute="width" secondItem="M3x-mu-c96" secondAttribute="height" multiplier="15:8" id="sgc-Z7-92X"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPy-nV-Zpk">
+                                <rect key="frame" x="128" y="556" width="119" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Add no Carrinho">
+                                    <color key="titleColor" red="0.20772364739999999" green="0.47746390100000002" blue="0.7098354697" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="addCarrinho:" destination="awD-w2-h0n" eventType="touchUpInside" id="MUz-He-yI0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vpv-nC-qm2" firstAttribute="top" secondItem="M3x-mu-c96" secondAttribute="bottom" constant="10" id="91a-a4-w2c"/>
                             <constraint firstItem="M3x-mu-c96" firstAttribute="trailing" secondItem="i9v-ia-zYf" secondAttribute="trailing" id="NAN-VF-lQo"/>
                             <constraint firstItem="M3x-mu-c96" firstAttribute="leading" secondItem="i9v-ia-zYf" secondAttribute="leading" id="OJa-O8-Ekq"/>
+                            <constraint firstItem="VPy-nV-Zpk" firstAttribute="centerX" secondItem="eP0-Uq-307" secondAttribute="centerX" id="c7c-0u-Bmz"/>
                             <constraint firstAttribute="trailing" secondItem="KaH-8u-hRr" secondAttribute="trailing" constant="10" id="cNL-Jm-Jiq"/>
                             <constraint firstItem="KaH-8u-hRr" firstAttribute="top" secondItem="M4Q-6e-hO5" secondAttribute="bottom" constant="10" id="eRb-xZ-iEn"/>
                             <constraint firstItem="KaH-8u-hRr" firstAttribute="leading" secondItem="i9v-ia-zYf" secondAttribute="leading" constant="10" id="h9O-a9-tU1"/>
@@ -180,10 +199,11 @@
                             <constraint firstItem="M4Q-6e-hO5" firstAttribute="top" secondItem="vpv-nC-qm2" secondAttribute="bottom" constant="10" id="ucA-kt-cSA"/>
                             <constraint firstItem="M4Q-6e-hO5" firstAttribute="leading" secondItem="i9v-ia-zYf" secondAttribute="leading" constant="10" id="v5H-ke-2jT"/>
                             <constraint firstItem="M3x-mu-c96" firstAttribute="top" secondItem="i9v-ia-zYf" secondAttribute="top" id="vbX-3l-pua"/>
+                            <constraint firstItem="VPy-nV-Zpk" firstAttribute="top" secondItem="KaH-8u-hRr" secondAttribute="bottom" constant="10" id="zsW-Ap-iJR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="i9v-ia-zYf"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" largeTitleDisplayMode="always" id="Ul2-Dn-mb6"/>
+                    <navigationItem key="navigationItem" title=" " largeTitleDisplayMode="always" id="Ul2-Dn-mb6"/>
                     <connections>
                         <outlet property="ivCarro" destination="M3x-mu-c96" id="XfX-Rh-vRs"/>
                         <outlet property="lbDescri" destination="KaH-8u-hRr" id="IQT-nh-D7r"/>
@@ -194,6 +214,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j5N-CJ-fMX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1532" y="-179.46026986506749"/>
+        </scene>
+        <!--Carrinho View Controller-->
+        <scene sceneID="cmx-t0-q23">
+            <objects>
+                <viewController storyboardIdentifier="CarrinhoViewController" id="TVF-Ce-VIW" customClass="CarrinhoViewController" customModule="Desafio" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" alpha="0.5" contentMode="scaleToFill" id="nJY-cC-YAn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKI-BD-pbT">
+                                <rect key="frame" x="17.5" y="63.5" width="340" height="540"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="340" id="Fro-1E-Wcs"/>
+                                    <constraint firstAttribute="height" constant="540" id="zg0-Fz-Cch"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20772364739999999" green="0.47746390100000002" blue="0.7098354697" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="eKI-BD-pbT" firstAttribute="centerY" secondItem="nJY-cC-YAn" secondAttribute="centerY" id="Iof-lR-fbk"/>
+                            <constraint firstItem="eKI-BD-pbT" firstAttribute="centerX" secondItem="nJY-cC-YAn" secondAttribute="centerX" id="qju-2R-TUE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wzA-BL-1aU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d3x-Ks-69z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2375" y="-180"/>
         </scene>
     </scenes>
 </document>

@@ -8,5 +8,7 @@ target 'Desafio' do
   pod 'Alamofire'
 
   pod 'Kingfisher'
+  
+  pod 'Moltin'
 
 end
