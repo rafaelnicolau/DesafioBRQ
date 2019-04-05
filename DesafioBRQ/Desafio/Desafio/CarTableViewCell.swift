@@ -22,13 +22,7 @@ class CarTableViewCell: UITableViewCell {
     @IBOutlet weak var lbNome: UILabel!
     @IBOutlet weak var lbQuant: UILabel!
     @IBOutlet weak var lbPreco: UILabel!
-    @IBAction func btteste(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Você deseja comprar esse?", message: "Ele está custando", preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Sim", style: .default, handler: nil))
-        alert.addAction(UIAlertAction(title: "Não", style: .cancel, handler: nil))
-        
-    }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

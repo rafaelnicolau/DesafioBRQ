@@ -14,25 +14,30 @@ class SalesTableViewController: UITableViewController {
     
     var carros: [Carro] = []
     var service = DesafioAPI()
-
-
+    var isLoading = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Carros"
-        service.loadCarros { (cars) in
-            if let cars = cars {
-                self.carros = cars
-                self.tableView.reloadData()
-               
-            }
         }
 
-       
-    }
-    
+  
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
+        
+        
+        service.loadCarros { (cars) in
+            self.isLoading = true
+            if let cars = cars {
+                self.carros = cars
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
+                    self.isLoading = false
+                    self.tableView.reloadData()
+                })
+                
+                }
+        }
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
@@ -45,19 +50,25 @@ class SalesTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return carros.count
+        return isLoading ? 10 : carros.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CarTableViewCell
-        cell.prepare(with: carros[indexPath.row])
-        return cell
+        if isLoading {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellLoading", for: indexPath) as! LoadingTableViewCell
+            cell.indicator.color = indexPath.row == 3 ? .red : .white
+            return cell
+        }else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CarTableViewCell
+            cell.prepare(with: carros[indexPath.row])
+            return cell
+        }
+        
     }
+}
+
     
-
-
-
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -103,4 +114,4 @@ class SalesTableViewController: UITableViewController {
     }
     */
     
-}
+
