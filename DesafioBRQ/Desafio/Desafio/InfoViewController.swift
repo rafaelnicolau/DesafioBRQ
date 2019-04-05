@@ -16,16 +16,20 @@ class InfoViewController: UIViewController {
     var carrinho: [Carro] = []
     static var totalcarrinho: [Carro] = []
     var service = DesafioAPI()
+    var loading: UIActivityIndicatorView = UIActivityIndicatorView()
     
     @IBOutlet weak var ivCarro: UIImageView!
     @IBOutlet weak var lbPreco: UILabel!
     @IBOutlet weak var lbNome: UILabel!
     @IBOutlet weak var lbDescri: UILabel!
+    @IBOutlet weak var Loading: UIActivityIndicatorView!
     
   
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        DispatchQueue.main.async {
+            
+        }
         service.loadCarro(idCar: id) { (car) in
             if let car = car {
                 self.carro = car
@@ -36,7 +40,15 @@ class InfoViewController: UIViewController {
        
         }
 
-
+    func Load () {
+        loading.center = self.view.center
+        loading.hidesWhenStopped = true
+        loading.style = UIActivityIndicatorView.Style.whiteLarge
+        view.addSubview(loading)
+        loading.startAnimating()
+    }
+    
+    
     func loadInfos(){
         title = carro!.nome
         let preco = carro!.preco as NSNumber
@@ -71,5 +83,9 @@ class InfoViewController: UIViewController {
 
 
 }
+    
+
+    
+    
 }
 

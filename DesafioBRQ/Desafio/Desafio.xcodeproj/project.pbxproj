@@ -19,6 +19,7 @@
 		FE45E4462205D1F400EFAD8B /* SalesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45E4442205D1F400EFAD8B /* SalesTableViewController.swift */; };
 		FE9DDE382245284200317573 /* carros.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9DDE372245284200317573 /* carros.swift */; };
 		FE9DDE3A224545F600317573 /* REST.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9DDE39224545F600317573 /* REST.swift */; };
+		FEBC97852256ABCD00EB675D /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBC97842256ABCD00EB675D /* LoadingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		FE45E4442205D1F400EFAD8B /* SalesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesTableViewController.swift; sourceTree = "<group>"; };
 		FE9DDE372245284200317573 /* carros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carros.swift; sourceTree = "<group>"; };
 		FE9DDE39224545F600317573 /* REST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REST.swift; sourceTree = "<group>"; };
+		FEBC97842256ABCD00EB675D /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				FE29EA002203A38F000FECC2 /* AppDelegate.swift */,
 				FE29EA022203A38F000FECC2 /* ViewController.swift */,
 				FE29EA042203A38F000FECC2 /* Main.storyboard */,
+				FEBC97842256ABCD00EB675D /* LoadingTableViewCell.swift */,
 				FE16E167225394450004BC36 /* CarrinhoViewController.swift */,
 				FE0541FC224C138C00D9EEBB /* CarTableViewCell.swift */,
 				FE45E4442205D1F400EFAD8B /* SalesTableViewController.swift */,
@@ -234,6 +237,7 @@
 			files = (
 				FE45E4462205D1F400EFAD8B /* SalesTableViewController.swift in Sources */,
 				FE0541FD224C138C00D9EEBB /* CarTableViewCell.swift in Sources */,
+				FEBC97852256ABCD00EB675D /* LoadingTableViewCell.swift in Sources */,
 				FE9DDE3A224545F600317573 /* REST.swift in Sources */,
 				FE29EA032203A38F000FECC2 /* ViewController.swift in Sources */,
 				FE16E168225394450004BC36 /* CarrinhoViewController.swift in Sources */,
