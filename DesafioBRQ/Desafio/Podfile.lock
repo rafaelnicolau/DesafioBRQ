@@ -1,42 +1,20 @@
 PODS:
-  - AFNetworking (3.1.0):
-    - AFNetworking/NSURLSession (= 3.1.0)
-    - AFNetworking/Reachability (= 3.1.0)
-    - AFNetworking/Security (= 3.1.0)
-    - AFNetworking/Serialization (= 3.1.0)
-    - AFNetworking/UIKit (= 3.1.0)
-  - AFNetworking/NSURLSession (3.1.0):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.1.0)
-  - AFNetworking/Security (3.1.0)
-  - AFNetworking/Serialization (3.1.0)
-  - AFNetworking/UIKit (3.1.0):
-    - AFNetworking/NSURLSession
-  - Alamofire (4.8.1)
+  - Alamofire (4.8.2)
   - Kingfisher (4.10.1)
-  - Moltin (1.1.9):
-    - AFNetworking (~> 3.1.0)
 
 DEPENDENCIES:
   - Alamofire
   - Kingfisher
-  - Moltin
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - AFNetworking
     - Alamofire
     - Kingfisher
-    - Moltin
 
 SPEC CHECKSUMS:
-  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
-  Moltin: 9b5ba41208938b51a6c80f6fcfe78e4de6eb8d3e
 
-PODFILE CHECKSUM: 4da0ba188c4f0f8f3e6a277b7e52076034796584
+PODFILE CHECKSUM: 9e5f5f19fceeb591000b0577d1ecb98adda3107d
 
 COCOAPODS: 1.6.1

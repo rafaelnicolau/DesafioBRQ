@@ -10,16 +10,25 @@ import UIKit
 import Kingfisher
 import Foundation
 
+extension SalesTableViewController: GetCarDelegate {
+    func setCar(index: Int) {
+        self.indexOfRow = index
+        self.performSegue(withIdentifier: "segueDetails", sender: nil)
+    }
+}
+
 class SalesTableViewController: UITableViewController {
+    
     
     var carros: [Carro] = []
     var service = DesafioAPI()
+    var indexOfRow = 0
     var isLoading = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Carros"
-        }
+    }
 
   
     override func viewWillAppear(_ animated: Bool) {
@@ -42,9 +51,14 @@ class SalesTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! InfoViewController
-        let idcar = carros[tableView.indexPathForSelectedRow!.row].id
-        vc.id = idcar
+        if let viewController = segue.destination as? InfoViewController, segue.identifier == "segueDetails" {
+            viewController.id = self.indexOfRow + 1
+        }
+        
+//        let vc = segue.destination as! InfoViewController
+//        let idcar = carros[tableView.indexPathForSelectedRow!.row].id
+//        vc.id = idcar
+
     }
     
     // MARK: - Table view data source
@@ -52,21 +66,25 @@ class SalesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return isLoading ? 10 : carros.count
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if isLoading {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellLoading", for: indexPath) as! LoadingTableViewCell
-            cell.indicator.color = indexPath.row == 3 ? .red : .white
+            cell.indicator.color = indexPath.row == 3 ? .white : .blue
             return cell
         }else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CarTableViewCell
+            cell.index = indexPath.row
+            cell.delegate = self
             cell.prepare(with: carros[indexPath.row])
             return cell
         }
-        
+    
     }
 }
+
+
 
     
     /*

@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.1076180711388588" green="0.37430256605148315" blue="0.61443096399307251" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.10588235294117647" green="0.37254901960784315" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -33,6 +33,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BRQ_ICON" width="400" height="400"/>
+        <image name="BRQ_ICON" width="512" height="512"/>
     </resources>
 </document>

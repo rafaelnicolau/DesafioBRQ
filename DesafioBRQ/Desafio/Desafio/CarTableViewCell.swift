@@ -10,11 +10,17 @@ import UIKit
 import Kingfisher
 import Foundation
 
+protocol GetCarDelegate: NSObjectProtocol {
+    func setCar(index: Int)
+}
+
 class CarTableViewCell: UITableViewCell {
 
     var id: Int?
+    var index: Int?
     var descri: String?
     var car: Carro?
+    weak var delegate: GetCarDelegate?
     
     
     @IBOutlet weak var ivCarro: UIImageView!
@@ -22,7 +28,10 @@ class CarTableViewCell: UITableViewCell {
     @IBOutlet weak var lbNome: UILabel!
     @IBOutlet weak var lbQuant: UILabel!
     @IBOutlet weak var lbPreco: UILabel!
-
+    @IBOutlet weak var viewBackGround: UIView!
+    @IBOutlet weak var btDetalhes: UIButton!
+    @IBOutlet weak var btComprar: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -34,9 +43,16 @@ class CarTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func setCar(_ sender: Any) {
+        self.delegate?.setCar(index: self.index ?? 0)
+    }
+    
+    
     func prepare(with cars: Carro){
         car = cars
-        print(car!)
+        viewBackGround.layer.cornerRadius = 15
+        btDetalhes.layer.cornerRadius = 5
+        btComprar.layer.cornerRadius = 5
        let preco = cars.preco as NSNumber
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
@@ -47,7 +63,7 @@ class CarTableViewCell: UITableViewCell {
         self.descri = cars.descricao
         lbMarca.text = cars.marca
         lbNome.text = cars.nome
-        lbQuant.text = String(cars.quantidade)
+        lbQuant.text = "Unidade: \(cars.quantidade)"
         lbPreco.text = formatter.string(from: preco)
         if let url = URL(string: cars.imagem) {
             ivCarro.kf.indicatorType = .activity
@@ -60,11 +76,10 @@ class CarTableViewCell: UITableViewCell {
         }
     }
     
-    func prepareForSegue(for segue: UIStoryboardSegue, sender: AnyObject?) {
-        id = car?.id
-        let infoViewController = segue.destination as! InfoViewController
-        infoViewController.id = self.id!
-    }
+//    func prepareForSegue(for segue: UIStoryboardSegue, sender: AnyObject?) {
+//        id = car?.id
+//        let infoViewController = segue.destination as! InfoViewController
+//        infoViewController.id = self.id!
+//    }
     
-  
 }

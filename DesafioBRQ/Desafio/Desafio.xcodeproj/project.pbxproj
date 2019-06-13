@@ -8,38 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		93F7D4C9A42E1293305BE019 /* Pods_Desafio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7198BEDCF2C43963A658AA2A /* Pods_Desafio.framework */; };
-		FE0541FD224C138C00D9EEBB /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0541FC224C138C00D9EEBB /* CarTableViewCell.swift */; };
-		FE16E168225394450004BC36 /* CarrinhoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16E167225394450004BC36 /* CarrinhoViewController.swift */; };
+		FE0F3487225E8BB0006EDA9A /* ListaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0F3486225E8BB0006EDA9A /* ListaViewController.swift */; };
+		FE0F3489225E8BE6006EDA9A /* CarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0F3488225E8BE6006EDA9A /* CarsTableViewCell.swift */; };
+		FE0F348D225FB97F006EDA9A /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0F348C225FB97F006EDA9A /* DetailsViewController.swift */; };
 		FE29EA012203A38F000FECC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE29EA002203A38F000FECC2 /* AppDelegate.swift */; };
-		FE29EA032203A38F000FECC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE29EA022203A38F000FECC2 /* ViewController.swift */; };
 		FE29EA062203A38F000FECC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE29EA042203A38F000FECC2 /* Main.storyboard */; };
 		FE29EA0B2203A391000FECC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE29EA092203A391000FECC2 /* LaunchScreen.storyboard */; };
 		FE29EA142203B43F000FECC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE29EA072203A391000FECC2 /* Assets.xcassets */; };
-		FE45E4422205D17800EFAD8B /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45E4402205D17800EFAD8B /* InfoViewController.swift */; };
-		FE45E4462205D1F400EFAD8B /* SalesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45E4442205D1F400EFAD8B /* SalesTableViewController.swift */; };
+		FE7762E5226DE70A0091C0C5 /* BD_model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE7762E3226DE70A0091C0C5 /* BD_model.xcdatamodeld */; };
+		FE7762E7226E09320091C0C5 /* ViewController+Coredata.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7762E6226E09320091C0C5 /* ViewController+Coredata.swift */; };
+		FE99A5DB2267AF8D00AE04F6 /* ShoppCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE99A5DA2267AF8D00AE04F6 /* ShoppCartTableViewCell.swift */; };
 		FE9DDE382245284200317573 /* carros.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9DDE372245284200317573 /* carros.swift */; };
 		FE9DDE3A224545F600317573 /* REST.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9DDE39224545F600317573 /* REST.swift */; };
-		FEBC97852256ABCD00EB675D /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBC97842256ABCD00EB675D /* LoadingTableViewCell.swift */; };
+		FEC8D2CC2267917500E3AD49 /* ShoppCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC8D2CB2267917500E3AD49 /* ShoppCartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7198BEDCF2C43963A658AA2A /* Pods_Desafio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Desafio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9145BCDB915191599472CF87 /* Pods-Desafio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio.debug.xcconfig"; path = "Target Support Files/Pods-Desafio/Pods-Desafio.debug.xcconfig"; sourceTree = "<group>"; };
 		B898CC79044DF55F0FD591D3 /* Pods-Desafio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio.release.xcconfig"; path = "Target Support Files/Pods-Desafio/Pods-Desafio.release.xcconfig"; sourceTree = "<group>"; };
-		FE0541FC224C138C00D9EEBB /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
-		FE16E167225394450004BC36 /* CarrinhoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrinhoViewController.swift; sourceTree = "<group>"; };
+		FE0F3486225E8BB0006EDA9A /* ListaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaViewController.swift; sourceTree = "<group>"; };
+		FE0F3488225E8BE6006EDA9A /* CarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsTableViewCell.swift; sourceTree = "<group>"; };
+		FE0F348C225FB97F006EDA9A /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		FE29E9FD2203A38F000FECC2 /* Desafio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Desafio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE29EA002203A38F000FECC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE29EA022203A38F000FECC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FE29EA052203A38F000FECC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE29EA072203A391000FECC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE29EA0A2203A391000FECC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE29EA0C2203A391000FECC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FE45E4402205D17800EFAD8B /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		FE45E4442205D1F400EFAD8B /* SalesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesTableViewController.swift; sourceTree = "<group>"; };
+		FE7762E4226DE70A0091C0C5 /* BD_model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BD_model.xcdatamodel; sourceTree = "<group>"; };
+		FE7762E6226E09320091C0C5 /* ViewController+Coredata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Coredata.swift"; sourceTree = "<group>"; };
+		FE99A5DA2267AF8D00AE04F6 /* ShoppCartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppCartTableViewCell.swift; sourceTree = "<group>"; };
 		FE9DDE372245284200317573 /* carros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carros.swift; sourceTree = "<group>"; };
 		FE9DDE39224545F600317573 /* REST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REST.swift; sourceTree = "<group>"; };
-		FEBC97842256ABCD00EB675D /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
+		FEC8D2CB2267917500E3AD49 /* ShoppCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppCartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,20 +95,53 @@
 			isa = PBXGroup;
 			children = (
 				FE29EA002203A38F000FECC2 /* AppDelegate.swift */,
-				FE29EA022203A38F000FECC2 /* ViewController.swift */,
-				FE29EA042203A38F000FECC2 /* Main.storyboard */,
-				FEBC97842256ABCD00EB675D /* LoadingTableViewCell.swift */,
-				FE16E167225394450004BC36 /* CarrinhoViewController.swift */,
-				FE0541FC224C138C00D9EEBB /* CarTableViewCell.swift */,
-				FE45E4442205D1F400EFAD8B /* SalesTableViewController.swift */,
-				FE9DDE372245284200317573 /* carros.swift */,
-				FE9DDE39224545F600317573 /* REST.swift */,
-				FE45E4402205D17800EFAD8B /* InfoViewController.swift */,
-				FE29EA072203A391000FECC2 /* Assets.xcassets */,
+				FE480AE622845DE2002035B9 /* Model */,
+				FE480AE722845E50002035B9 /* View */,
+				FE480AEA22845F7B002035B9 /* Presenter */,
 				FE29EA092203A391000FECC2 /* LaunchScreen.storyboard */,
+				FE29EA072203A391000FECC2 /* Assets.xcassets */,
 				FE29EA0C2203A391000FECC2 /* Info.plist */,
 			);
 			path = Desafio;
+			sourceTree = "<group>";
+		};
+		FE480AE622845DE2002035B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FE9DDE39224545F600317573 /* REST.swift */,
+				FE9DDE372245284200317573 /* carros.swift */,
+				FE7762E3226DE70A0091C0C5 /* BD_model.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FE480AE722845E50002035B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE480AE822845E65002035B9 /* Cell */,
+				FE0F3486225E8BB0006EDA9A /* ListaViewController.swift */,
+				FE29EA042203A38F000FECC2 /* Main.storyboard */,
+				FEC8D2CB2267917500E3AD49 /* ShoppCartViewController.swift */,
+				FE7762E6226E09320091C0C5 /* ViewController+Coredata.swift */,
+				FE0F348C225FB97F006EDA9A /* DetailsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE480AE822845E65002035B9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FE99A5DA2267AF8D00AE04F6 /* ShoppCartTableViewCell.swift */,
+				FE0F3488225E8BE6006EDA9A /* CarsTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FE480AEA22845F7B002035B9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,19 +222,15 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Desafio/Pods-Desafio-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/Moltin/Moltin.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moltin.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -235,15 +266,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE45E4462205D1F400EFAD8B /* SalesTableViewController.swift in Sources */,
-				FE0541FD224C138C00D9EEBB /* CarTableViewCell.swift in Sources */,
-				FEBC97852256ABCD00EB675D /* LoadingTableViewCell.swift in Sources */,
+				FE0F3487225E8BB0006EDA9A /* ListaViewController.swift in Sources */,
+				FE7762E5226DE70A0091C0C5 /* BD_model.xcdatamodeld in Sources */,
 				FE9DDE3A224545F600317573 /* REST.swift in Sources */,
-				FE29EA032203A38F000FECC2 /* ViewController.swift in Sources */,
-				FE16E168225394450004BC36 /* CarrinhoViewController.swift in Sources */,
+				FE99A5DB2267AF8D00AE04F6 /* ShoppCartTableViewCell.swift in Sources */,
+				FEC8D2CC2267917500E3AD49 /* ShoppCartViewController.swift in Sources */,
+				FE7762E7226E09320091C0C5 /* ViewController+Coredata.swift in Sources */,
 				FE29EA012203A38F000FECC2 /* AppDelegate.swift in Sources */,
-				FE45E4422205D17800EFAD8B /* InfoViewController.swift in Sources */,
 				FE9DDE382245284200317573 /* carros.swift in Sources */,
+				FE0F3489225E8BE6006EDA9A /* CarsTableViewCell.swift in Sources */,
+				FE0F348D225FB97F006EDA9A /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,7 +431,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rafael.Desafio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = Desafio/BridgingHeader.h;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -419,7 +450,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rafael.Desafio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = Desafio/BridgingHeader.h;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -447,6 +477,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FE7762E3226DE70A0091C0C5 /* BD_model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FE7762E4226DE70A0091C0C5 /* BD_model.xcdatamodel */,
+			);
+			currentVersion = FE7762E4226DE70A0091C0C5 /* BD_model.xcdatamodel */;
+			path = BD_model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FE29E9F52203A38F000FECC2 /* Project object */;
 }

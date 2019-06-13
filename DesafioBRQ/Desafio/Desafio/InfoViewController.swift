@@ -23,17 +23,22 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var lbNome: UILabel!
     @IBOutlet weak var lbDescri: UILabel!
     @IBOutlet weak var Loading: UIActivityIndicatorView!
+    @IBOutlet weak var addCarrinho: UIButton!
     
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.async {
-            
-        }
+
         service.loadCarro(idCar: id) { (car) in
             if let car = car {
                 self.carro = car
                 self.loadInfos()
+                if self.carro == nil {
+                    self.addCarrinho.isHidden = true
+                }else {
+                    self.addCarrinho.isHidden = false
+                }
+                
                 }
             }
         
@@ -49,7 +54,7 @@ class InfoViewController: UIViewController {
     }
     
     
-    func loadInfos(){
+    func loadInfos() {
         title = carro!.nome
         let preco = carro!.preco as NSNumber
         let formatter = NumberFormatter()

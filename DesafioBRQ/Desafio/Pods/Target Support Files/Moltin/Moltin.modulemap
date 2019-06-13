@@ -1,6 +1,0 @@
-framework module Moltin {
-  umbrella header "Moltin-umbrella.h"
-
-  export *
-  module * { export * }
-}
