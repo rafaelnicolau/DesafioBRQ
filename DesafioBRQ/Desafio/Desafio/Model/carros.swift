@@ -11,15 +11,12 @@ import Foundation
 
 class Carro : Codable {
     
-    var id: Int
-    var nome: String
-    var descricao: String
-    var marca: String
-    var quantidade: Int
-    var preco: Double
-    var imagem: String
-    
-    func toString() -> String{
-        return "Id: \(id), Nome: \(nome), Marca: \(marca)"
-    }
+    var id = 0
+    var nome = ""
+    var descricao = ""
+    var marca =  ""
+    var quantidade = 0
+    var preco = 0.0
+    var imagem = ""
+    var shopQuant: Int?
 }

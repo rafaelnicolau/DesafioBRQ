@@ -1,14 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="BdCarro" representedClassName="BdCarro" syncable="YES" codeGenerationType="class">
-        <attribute name="descricao" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="imagem" optional="YES" attributeType="Transformable" syncable="YES"/>
-        <attribute name="marca" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="preco" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="quantidade" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
-    <elements>
-        <element name="BdCarro" positionX="-36" positionY="9" width="128" height="135"/>
-    </elements>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <elements/>
 </model>
