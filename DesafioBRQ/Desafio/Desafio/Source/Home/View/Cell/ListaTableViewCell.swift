@@ -39,8 +39,18 @@ class ListaTableViewCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        self.validadeBtComprar()
         self.favorite = false
         self.btFavorite.setImage(UIImage(named: "favoriteIsEmpty"), for: .normal)
+    }
+    
+    func validadeBtComprar() {
+        guard let index = indexPath else { return }
+        if Shop.shared.serviceRequest[index.row].quantidade >= 1 {
+            self.btComprar.isEnabled = true
+        }else {
+            self.btComprar.isEnabled = false
+        }
     }
     
     func validateFavorite() -> Bool{

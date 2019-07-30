@@ -31,6 +31,7 @@ class Shop {
                 carrinho.list[i].shopQuant? += 1
                 serviceRequest[indexPath.row].quantidade -= 1
                 carrinho.total += car.preco
+                print(carrinho.total)
                 break
             }
         }
@@ -43,6 +44,7 @@ class Shop {
             for i in 0..<carrinho.list.count{
                 if carrinho.list[i].id == car.id{
                     carrinho.list[i].shopQuant = 1
+                    print(carrinho.total)
                     break
                 }
             }

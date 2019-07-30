@@ -17,6 +17,7 @@ class HistoricViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tbHistoric.backgroundColor = .clear
         showTableView()
         
 

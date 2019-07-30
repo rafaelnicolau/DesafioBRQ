@@ -145,7 +145,7 @@ extension ShopViewController: UITableViewDelegate , UITableViewDataSource{
             if quantCar >= 1 {
                 self.findIdServiceRequestForDeleteOne(carro)
                 carro.shopQuant = quantCar + 1
-                Shop.shared.shopCredit += carro.preco
+                Shop.shared.carrinho.total += carro.preco
                 self.showTableView()
             }
             self.showTableView()
@@ -164,12 +164,12 @@ extension ShopViewController: UITableViewDelegate , UITableViewDataSource{
             if quantCar >= 2 {
                 carro.shopQuant! -= 1
                 self.findIdServiceRequestForOne(carro)
-                Shop.shared.shopCredit -= carro.preco
+                Shop.shared.carrinho.total -= carro.preco
                 self.showTableView()
             }else if carro.shopQuant! == 1 {
                 Shop.shared.carrinho.list.remove(at: indexpath.row)
                 self.findIdServiceRequestForOne(carro)
-                Shop.shared.shopCredit -= carro.preco
+                Shop.shared.carrinho.total -= carro.preco
                 self.showTableView()
             }
         }
@@ -192,11 +192,15 @@ extension ShopViewController: UITableViewDelegate , UITableViewDataSource{
 //        let deleteAction = UIAlertAction(title: "SIM", style: .default) { (Action) in
             if let quantCar = carro.shopQuant {
                 let valor = carro.preco * Double(quantCar)
-                Shop.shared.shopCredit -= Double(valor)
+                Shop.shared.carrinho.total -= Double(valor)
             }
-            Shop.shared.carrinho.list.removeAll()
-
-//            Shop.shared.carrinho.list.remove(at: indexpath.row)
+//            Shop.shared.carrinho.list.removeAll()
+        for i in 0..<Shop.shared.carrinho.list.count{
+            if Shop.shared.carrinho.list[i].id == carro.id {
+                Shop.shared.carrinho.list.remove(at: i)
+                Shop.shared.carrinho.total -= carro.preco
+            }
+        }
             self.showTableView()
         }
 //        let cancelAction = UIAlertAction(title: "NÃO", style: .default, handler: nil)

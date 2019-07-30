@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 import Kingfisher
 
 class HistoricTableViewCell: UITableViewCell {
@@ -23,7 +24,15 @@ class HistoricTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
+    
+    func formatDate(_ Date: Date) -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        dateFormatter.locale = Locale(identifier: "pt_BR")
+        return dateFormatter.string(from: Date)
+    }
+    
     func formatValor(valor: Double) -> String{
         let Valor = valor as NSNumber
         let format = NumberFormatter()
@@ -35,27 +44,20 @@ class HistoricTableViewCell: UITableViewCell {
     }
     
     func formatCell(_ compras: Carrinho) {
+        self.View.layer.cornerRadius = 10
+        guard let date = compras.date else { return }
+        self.lbNomeCompra.text = formatDate(date)
         if let urlImage = URL(string: compras.list.first?.imagem ?? "") {
             self.uiImage.kf.indicatorType = .activity
             self.uiImage.kf.setImage(with: urlImage)
+            if uiImage.image == nil {
+                uiImage.image = UIImage(named: "PUG")
+            }
         }
+        self.lbUnidades.text = "Itens comprados: \(compras.itens)"
+        self.lbTotal.text = formatValor(valor: compras.total)
     }
-//        guard let comp = compras else { return }
-//        View.layer.cornerRadius = 10
-//        for i in 0..<compras.list.count{
-//
-//        }
-//        if let url = URL(string: comp.list[0].imagem) {
-//            uiImage.kf.indicatorType = .activity
-//            uiImage.kf.setImage(with: url)
-//            if uiImage.image == nil {
-//                uiImage.image = UIImage(named: "PUG")
-//            }
-//        }
-//        lbNomeCompra.text = "Compra"
-//        lbUnidades.text = "0"
-//        lbTotal.text = "total"
-//    }
+
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
