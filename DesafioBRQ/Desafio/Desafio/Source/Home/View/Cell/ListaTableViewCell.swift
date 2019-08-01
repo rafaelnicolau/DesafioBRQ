@@ -136,7 +136,7 @@ class ListaTableViewCell: UITableViewCell {
         if let car = self.carro, let index = self.indexPath{
             Shop.shared.addCarrinho(car, indexPath: index)
             delegate?.tableviewReload()
-            btComprarStop(car)
+            self.btComprarStop(car)
         }
     }
 
@@ -145,8 +145,10 @@ class ListaTableViewCell: UITableViewCell {
         for i in 0..<Shop.shared.serviceRequest.count{
             if Shop.shared.serviceRequest[i].id == car.id{
                 if Shop.shared.serviceRequest[i].quantidade >= 1{
+                    btComprar.backgroundColor = UIColor(named: "main")
                     btComprar.isEnabled = true
                 }else {
+                    btComprar.backgroundColor = .gray
                     btComprar.isEnabled = false
                 }
             }
