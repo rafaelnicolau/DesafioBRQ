@@ -31,6 +31,10 @@
 		FE9DDE3A224545F600317573 /* REST.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9DDE39224545F600317573 /* REST.swift */; };
 		FED0D10F22E772E800677A91 /* HistoricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED0D10E22E772E800677A91 /* HistoricViewController.swift */; };
 		FED0D11222E778D600677A91 /* HistoricTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED0D11122E778D600677A91 /* HistoricTableViewCell.swift */; };
+		FED63CFD2306E7E200CBFDBC /* ListaMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED63CFB2306E7E200CBFDBC /* ListaMainTableViewCell.swift */; };
+		FED63CFE2306E7E200CBFDBC /* ListaMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED63CFC2306E7E200CBFDBC /* ListaMainTableViewCell.xib */; };
+		FED63D022306F1BF00CBFDBC /* ListaMainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED63D012306F1BF00CBFDBC /* ListaMainPresenter.swift */; };
+		FED63D042306F4EB00CBFDBC /* CarViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED63D032306F4EB00CBFDBC /* CarViewData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +66,10 @@
 		FE9DDE39224545F600317573 /* REST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REST.swift; sourceTree = "<group>"; };
 		FED0D10E22E772E800677A91 /* HistoricViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricViewController.swift; sourceTree = "<group>"; };
 		FED0D11122E778D600677A91 /* HistoricTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricTableViewCell.swift; sourceTree = "<group>"; };
+		FED63CFB2306E7E200CBFDBC /* ListaMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaMainTableViewCell.swift; sourceTree = "<group>"; };
+		FED63CFC2306E7E200CBFDBC /* ListaMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListaMainTableViewCell.xib; sourceTree = "<group>"; };
+		FED63D012306F1BF00CBFDBC /* ListaMainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaMainPresenter.swift; sourceTree = "<group>"; };
+		FED63D032306F4EB00CBFDBC /* CarViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				FE1F8B2722B7DC6F0020304A /* View */,
+				FED63D002306F18F00CBFDBC /* Presenter */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -151,6 +160,8 @@
 		FE1F8B2822B7DC910020304A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				FED63CFB2306E7E200CBFDBC /* ListaMainTableViewCell.swift */,
+				FED63CFC2306E7E200CBFDBC /* ListaMainTableViewCell.xib */,
 				FE676B2622BBB13D007CF610 /* ListaTableViewCell.swift */,
 			);
 			path = Cell;
@@ -226,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				FE6F3EAD22D77F5800D4F2E9 /* Shop.swift */,
+				FED63D032306F4EB00CBFDBC /* CarViewData.swift */,
 				FE07899122EB40AF004F699C /* Carrinho.swift */,
 				FE07898922E8CCF4004F699C /* Historic.swift */,
 				FE07898F22EB3AA3004F699C /* Compra.swift */,
@@ -260,6 +272,15 @@
 				FED0D11122E778D600677A91 /* HistoricTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		FED63D002306F18F00CBFDBC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FED63D012306F1BF00CBFDBC /* ListaMainPresenter.swift */,
+			);
+			name = Presenter;
+			path = ../Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +343,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FED63CFE2306E7E200CBFDBC /* ListaMainTableViewCell.xib in Resources */,
 				FE29EA0B2203A391000FECC2 /* LaunchScreen.storyboard in Resources */,
 				FE29EA142203B43F000FECC2 /* Assets.xcassets in Resources */,
 				FE29EA062203A38F000FECC2 /* Main.storyboard in Resources */,
@@ -385,10 +407,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FED0D11222E778D600677A91 /* HistoricTableViewCell.swift in Sources */,
+				FED63D022306F1BF00CBFDBC /* ListaMainPresenter.swift in Sources */,
 				FE0F3487225E8BB0006EDA9A /* ListaViewController.swift in Sources */,
 				FE7762E5226DE70A0091C0C5 /* BD_model.xcdatamodeld in Sources */,
 				FE07899222EB40AF004F699C /* Carrinho.swift in Sources */,
 				FE6F3EB222D783C400D4F2E9 /* ShopCellTableViewCell.swift in Sources */,
+				FED63D042306F4EB00CBFDBC /* CarViewData.swift in Sources */,
 				FE07898422E8C6D8004F699C /* FavoriteViewController.swift in Sources */,
 				FE07898A22E8CCF4004F699C /* Historic.swift in Sources */,
 				FE6F3EB022D77FF200D4F2E9 /* ShopViewController.swift in Sources */,
@@ -397,6 +421,7 @@
 				FE676B2722BBB13D007CF610 /* ListaTableViewCell.swift in Sources */,
 				FE7762E7226E09320091C0C5 /* ViewController+Coredata.swift in Sources */,
 				FE07898822E8CB47004F699C /* FavoriteTableViewCell.swift in Sources */,
+				FED63CFD2306E7E200CBFDBC /* ListaMainTableViewCell.swift in Sources */,
 				FE6C35CD22DF6E4400230F7C /* PopUpViewController.swift in Sources */,
 				FE29EA012203A38F000FECC2 /* AppDelegate.swift in Sources */,
 				FED0D10F22E772E800677A91 /* HistoricViewController.swift in Sources */,

@@ -21,9 +21,14 @@ class ListaViewController: UIViewController {
     var idCar = 0
     var indexPath: IndexPath?
     private var car = Carro()
+    private let listaMainPresenter = ListaMainPresenter()
+    private var carsViewData: [CarViewData]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let nib = UINib(nibName: "ListaMainTableViewCell", bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: "ListaMainTableViewCellXIB")
+        self.listaMainPresenter.setDelegate(listaMainDelegate: self)
         self.tableView.isHidden = true
         showTableView()
     }
@@ -37,20 +42,6 @@ class ListaViewController: UIViewController {
         vc.id = self.idCar
         vc.indexPath = self.indexPath
     }
-
-    func showTableView() {
-        DesafioAPI.loadcarros(onComplete: { [weak self] (cars) in
-            Shop.shared.serviceRequest = cars
-            DispatchQueue.main.async {
-                self?.tableView.reloadData()
-                self?.tableView.isHidden = false
-            }
-        }) { (error) in
-            self.tableView.isHidden = true
-            self.indicator.isHidden = false
-            print(error)
-        }
-    }
     
     func alerta(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
@@ -62,17 +53,16 @@ class ListaViewController: UIViewController {
 extension ListaViewController: UITableViewDataSource, UITableViewDelegate{
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Shop.shared.serviceRequest.count
+        guard let carsViewData = self.carsViewData else {return 0}
+        return carsViewData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let iten = Shop.shared.serviceRequest[indexPath.row]
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell") as! ListaTableViewCell
+        guard let carsViewData = self.carsViewData else { return UITableViewCell() }
+        let iten = carsViewData[indexPath.row]
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell") as! ListaMainTableViewCell
         cell.delegate = self
-        cell.carro = iten
-        cell.id = iten.id
-        cell.favorite = cell.validateFavorite()
-        cell.indexPath = indexPath
+        cell.carViewData = iten
         cell.formatCell(iten)
         return cell
     }
@@ -87,4 +77,36 @@ extension ListaViewController: ListaDelagate{
     func tableviewReload() {
         self.tableView.reloadData()
     }
+}
+
+extension ListaViewController: ListaMainDelegate{
+    func showTableView() {
+        //
+    }
+    
+    func showLoading() {
+        //
+    }
+    
+    func stopLoading() {
+        //
+    }
+    
+    func emptyList() {
+        //
+    }
+    
+    func gernicError() {
+        //
+    }
+    
+    func setViewData(_ viewData: [CarViewData]) {
+        self.carsViewData = viewData
+    }
+    
+    func setCar(_ carro: CarViewData) {
+        //
+    }
+    
+    
 }

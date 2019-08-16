@@ -188,13 +188,11 @@ extension ShopViewController: UITableViewDelegate , UITableViewDataSource{
         Shop.shared.carrinho.list.remove(at: indexpath.row)
         self.showTableView()
         }
-//        let alert = UIAlertController(title: "Delete", message: "Deseja excluir o Carro?", preferredStyle: .alert)
-//        let deleteAction = UIAlertAction(title: "SIM", style: .default) { (Action) in
+
             if let quantCar = carro.shopQuant {
                 let valor = carro.preco * Double(quantCar)
                 Shop.shared.carrinho.total -= Double(valor)
             }
-//            Shop.shared.carrinho.list.removeAll()
         for i in 0..<Shop.shared.carrinho.list.count{
             if Shop.shared.carrinho.list[i].id == carro.id {
                 Shop.shared.carrinho.list.remove(at: i)
@@ -203,11 +201,7 @@ extension ShopViewController: UITableViewDelegate , UITableViewDataSource{
         }
             self.showTableView()
         }
-//        let cancelAction = UIAlertAction(title: "NÃO", style: .default, handler: nil)
-//        alert.addAction(deleteAction)
-//        alert.addAction(cancelAction)
-//        self.showTableView()
-//        present(alert, animated: true)
+
 }
 
 extension ShopViewController: ShopCellDelegate {
